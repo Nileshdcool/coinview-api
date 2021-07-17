@@ -1,0 +1,30 @@
+{
+  "name": "coinview-api",
+  "version": "1.0.0",
+  "description": "this is api project for adding all business logic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nileshdcool/coinview-api.git"
+  },
+  "keywords": [
+    "coinview",
+    "crypto-tracker"
+  ],
+  "author": "neil.sukalikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nileshdcool/coinview-api/issues"
+  },
+  "homepage": "https://github.com/Nileshdcool/coinview-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
+  }
+}
