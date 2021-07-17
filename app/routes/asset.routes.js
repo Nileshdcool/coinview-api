@@ -9,6 +9,8 @@ module.exports = app => {
     // Retrieve all assets
     router.get("/", assets.findAll);
 
+    router.get("/getAllAssets", assets.getAllAssets);
+
     // Retrieve all published assets
     router.get("/published", assets.findAllPublished);
 

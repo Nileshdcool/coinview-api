@@ -1,6 +1,32 @@
 const db = require("../models");
 const Asset = db.assets;
 
+//get all crypto
+
+exports.getAllAssets = (req, res) => {
+    const rp = require('request-promise');
+    const requestOptions = {
+        method: 'GET',
+        uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+        qs: {
+            'start': '1',
+            'limit': '5000',
+            'convert': 'USD'
+        },
+        headers: {
+            'X-CMC_PRO_API_KEY': '1b86a12a-b486-4b77-b7fe-a46457149f31'
+        },
+        json: true,
+        gzip: true
+    };
+    rp(requestOptions).then(response => {
+        res.send(response.data);
+        console.log('API call response:', response);
+    }).catch((err) => {
+        console.log('API call error:', err.message);
+    });
+}
+
 // Create and Save a new asset
 exports.create = (req, res) => {
     // Validate request
