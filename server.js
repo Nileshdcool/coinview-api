@@ -17,9 +17,13 @@ db.mongoose
         console.log("Cannot connect to the database!", err);
         process.exit();
     });
+// local setup
+// var corsOptions = {
+//     origin: "http://localhost:8081"
+// };
 
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "https://coinview-webai.herokuapp.com"
 };
 
 app.use(cors(corsOptions));
