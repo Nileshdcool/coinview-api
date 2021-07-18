@@ -19,14 +19,14 @@ db.mongoose
     });
 
 // local setup
-// var corsOptions = {
-//     origin: "http://localhost:8081"
-// };
+var corsOptions = {
+    origin: "http://localhost:8081"
+};
 
 //heroku setup
-var corsOptions = {
-    origin: "https://coinview-webai.herokuapp.com"
-};
+// var corsOptions = {
+//     origin: "https://coinview-webai.herokuapp.com"
+// };
 
 app.use(cors(corsOptions));
 
