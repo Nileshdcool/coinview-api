@@ -21,7 +21,6 @@ exports.getAllAssets = (req, res) => {
     };
     rp(requestOptions).then(response => {
         res.send(response.data);
-        console.log('API call response:', response);
     }).catch((err) => {
         console.log('API call error:', err.message);
     });
