@@ -14,7 +14,7 @@ exports.getAllAssets = (req, res) => {
             'convert': 'USD'
         },
         headers: {
-            'X-CMC_PRO_API_KEY': '46712f2e-59d6-4cb9-a3b9-c2685bb389fd'
+            'X-CMC_PRO_API_KEY': 'b03f55c8-eadd-4423-8f43-603588fe9cc0'
         },
         json: true,
         gzip: true
@@ -32,7 +32,7 @@ exports.getCryptoInfo = (req, res) => {
         method: 'GET',
         uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id='+req.query.id,
         headers: {
-            'X-CMC_PRO_API_KEY': '46712f2e-59d6-4cb9-a3b9-c2685bb389fd'
+            'X-CMC_PRO_API_KEY': 'b03f55c8-eadd-4423-8f43-603588fe9cc0'
         },
         json: true,
         gzip: true
