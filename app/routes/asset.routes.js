@@ -11,6 +11,9 @@ module.exports = app => {
 
     router.get("/getAllAssets", assets.getAllAssets);
 
+    // Retrieve a single crypto with id
+    router.get("/getCryptoInfo", assets.getCryptoInfo);
+
     // Retrieve all published assets
     router.get("/published", assets.findAllPublished);
 

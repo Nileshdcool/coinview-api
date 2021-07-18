@@ -14,13 +14,31 @@ exports.getAllAssets = (req, res) => {
             'convert': 'USD'
         },
         headers: {
-            'X-CMC_PRO_API_KEY': '1b86a12a-b486-4b77-b7fe-a46457149f31'
+            'X-CMC_PRO_API_KEY': '46712f2e-59d6-4cb9-a3b9-c2685bb389fd'
         },
         json: true,
         gzip: true
     };
     rp(requestOptions).then(response => {
         res.send(response.data);
+    }).catch((err) => {
+        console.log('API call error:', err.message);
+    });
+}
+
+exports.getCryptoInfo = (req, res) => {
+    const rp = require('request-promise');
+    const requestOptions = {
+        method: 'GET',
+        uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id='+req.query.id,
+        headers: {
+            'X-CMC_PRO_API_KEY': '46712f2e-59d6-4cb9-a3b9-c2685bb389fd'
+        },
+        json: true,
+        gzip: true
+    };
+    rp(requestOptions).then(response => {
+        res.send(response);
     }).catch((err) => {
         console.log('API call error:', err.message);
     });
